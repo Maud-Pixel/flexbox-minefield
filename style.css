@@ -8,38 +8,6 @@
   src: url("Images/Noto_Sans_JP/NotoSansJP-Medium.otf");
 }
 
-.td, .tdhidden {
-  width: 50px;
-  height: 50px;
-  -webkit-box-sizing: content;
-          box-sizing: content;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.td, .td--one, .td--two, .td--three {
-  border: 2px solid white;
-  border-style: inset;
-  display: none;
-  z-index: 2;
-  background-color: #737373;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.td--one, .td--two, .td--three {
-  width: 50px;
-  height: 50px;
-}
-
 body {
   background-color: white;
   text-align: center;
@@ -80,20 +48,86 @@ img {
   z-index: 1;
 }
 
+.td {
+  width: 50px;
+  height: 50px;
+  -webkit-box-sizing: content;
+          box-sizing: content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid white;
+  border-style: inset;
+  display: none;
+  z-index: 2;
+  background-color: #737373;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
 .td--one {
+  border: 2px solid white;
+  border-style: inset;
+  display: none;
+  z-index: 2;
+  background-color: #737373;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 50px;
+  height: 50px;
   color: green;
 }
 
 .td--two {
+  border: 2px solid white;
+  border-style: inset;
+  display: none;
+  z-index: 2;
+  background-color: #737373;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 50px;
+  height: 50px;
   color: red;
 }
 
 .td--three {
+  border: 2px solid white;
+  border-style: inset;
+  display: none;
+  z-index: 2;
+  background-color: #737373;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 50px;
+  height: 50px;
   color: blue;
 }
 
 .tdhidden {
   border: 1px solid #bfbfbf;
+  width: 50px;
+  height: 50px;
+  -webkit-box-sizing: content;
+          box-sizing: content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .tdhidden:hover .tdhidden {
