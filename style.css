@@ -12,16 +12,27 @@ body {
   background-color: white;
   text-align: center;
   font-family: "Noto";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 img {
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
 }
 
-table {
-  width: 400px;
-  height: 400px;
+.table {
+  width: 418px;
+  height: 416px;
+  border: 5px solid black;
+  background-color: #e6e6e6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,25 +42,64 @@ table {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  border: 5px solid black;
+  margin-top: 50%;
+  z-index: 1;
+}
+
+.td, .td--one, .td--two, .td--three {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  -webkit-box-sizing: content;
+          box-sizing: content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 5px solid black;
-  background-color: #e6e6e6;
+  display: none;
+  z-index: 2;
 }
 
-.one {
+.td--one, .td--one--one, .td--two--one, .td--three--one {
   color: green;
 }
 
-.two {
+.td--two, .td--one--two, .td--two--two, .td--three--two {
   color: red;
 }
 
-.three {
+.td--three, .td--one--three, .td--two--three, .td--three--three {
   color: blue;
+}
+
+.tdhidden {
+  width: 50px;
+  height: 50px;
+  border: 1px solid grey;
+  -webkit-box-sizing: content;
+          box-sizing: content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tdhidden:hover .tdhidden {
+  display: none;
+}
+
+.tdhidden:hover .td, .tdhidden:hover .td--one, .tdhidden:hover .td--two, .tdhidden:hover .td--three {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
