@@ -9,7 +9,7 @@
     src: url("Images/Noto_Sans_JP/NotoSansJP-Medium.otf");
 }
 $grey-light:  #bfbfbf;
-.entity
+%entity
 {
     width: 50px;
     height: 50px;
@@ -24,6 +24,7 @@ body
     background-color: white;
     text-align: center;
     font-family: "Noto"; 
+    font-size: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,14 +52,15 @@ img
 }
 .td , .td--one, .td--two, .td--three
 {
-    @extend .entity;
-    border: 2px solid $grey-light;
+    @extend %entity;
+    border: 2px solid white;
     border-style: inset;
     display: none;
     z-index: 2;
     background-color:#737373;
     align-self: center;
-
+    
+    
     &--one
     {
         color: green;
@@ -71,13 +73,14 @@ img
     {
         color: blue;
     }
+    
 }
 
 .tdhidden
 {
     
-    border: 1px solid grey;
-    @extend .entity;
+    border: 1px solid $grey-light; 
+    @extend %entity;
     
 }
 
@@ -86,6 +89,7 @@ img
     .tdhidden
     {
         display: none;
+        background-color: #737373;
         
     }
     .td , .td--one, .td--two, .td--three

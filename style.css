@@ -8,10 +8,27 @@
   src: url("Images/Noto_Sans_JP/NotoSansJP-Medium.otf");
 }
 
+.td, .td--one, .td--two, .td--three, .tdhidden {
+  width: 50px;
+  height: 50px;
+  -webkit-box-sizing: content;
+          box-sizing: content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 body {
   background-color: white;
   text-align: center;
   font-family: "Noto";
+  font-size: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,24 +65,14 @@ img {
 }
 
 .td, .td--one, .td--two, .td--three {
-  width: 50px;
-  height: 50px;
-  -webkit-box-sizing: content;
-          box-sizing: content;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 2px solid #737373;
+  border: 2px solid white;
   border-style: inset;
   display: none;
   z-index: 2;
-  background-color: #bfbfbf;
+  background-color: #737373;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .td--one, .td--one--one, .td--two--one, .td--three--one {
@@ -81,24 +88,12 @@ img {
 }
 
 .tdhidden {
-  border: 1px solid grey;
-  width: 50px;
-  height: 50px;
-  -webkit-box-sizing: content;
-          box-sizing: content;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  border: 1px solid #bfbfbf;
 }
 
 .tdhidden:hover .tdhidden {
   display: none;
+  background-color: #737373;
 }
 
 .tdhidden:hover .td, .tdhidden:hover .td--one, .tdhidden:hover .td--two, .tdhidden:hover .td--three {
