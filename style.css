@@ -8,7 +8,7 @@
   src: url("Images/Noto_Sans_JP/NotoSansJP-Medium.otf");
 }
 
-.td, .td--one, .td--two, .td--three, .tdhidden {
+.td, .tdhidden {
   width: 50px;
   height: 50px;
   -webkit-box-sizing: content;
@@ -22,6 +22,22 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.td, .td--one, .td--two, .td--three {
+  border: 2px solid white;
+  border-style: inset;
+  display: none;
+  z-index: 2;
+  background-color: #737373;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.td--one, .td--two, .td--three {
+  width: 50px;
+  height: 50px;
 }
 
 body {
@@ -64,26 +80,15 @@ img {
   z-index: 1;
 }
 
-.td, .td--one, .td--two, .td--three {
-  border: 2px solid white;
-  border-style: inset;
-  display: none;
-  z-index: 2;
-  background-color: #737373;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.td--one, .td--one--one, .td--two--one, .td--three--one {
+.td--one {
   color: green;
 }
 
-.td--two, .td--one--two, .td--two--two, .td--three--two {
+.td--two {
   color: red;
 }
 
-.td--three, .td--one--three, .td--two--three, .td--three--three {
+.td--three {
   color: blue;
 }
 

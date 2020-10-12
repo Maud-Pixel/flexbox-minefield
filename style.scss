@@ -9,6 +9,7 @@
     src: url("Images/Noto_Sans_JP/NotoSansJP-Medium.otf");
 }
 $grey-light:  #bfbfbf;
+$grey-dark: #737373;
 %entity
 {
     width: 50px;
@@ -18,6 +19,23 @@ $grey-light:  #bfbfbf;
     justify-content: center;
     align-items: center;
 
+}
+%btn-noHidden
+{
+    
+    border: 2px solid white;
+    border-style: inset;
+    display: none;
+    z-index: 2;
+    background-color:$grey-dark;
+    align-self: center;
+    
+}
+
+%size
+{
+    width: 50px;
+    height: 50px;
 }
 body
 {
@@ -47,41 +65,38 @@ img
     flex-wrap: wrap;
     border: 5px solid black;
     margin-top: 50%;
-    z-index: 1
-    
+    z-index: 1  
 }
-.td , .td--one, .td--two, .td--three
+.td 
 {
     @extend %entity;
-    border: 2px solid white;
-    border-style: inset;
-    display: none;
-    z-index: 2;
-    background-color:#737373;
-    align-self: center;
-    
+    @extend %btn-noHidden;
     
     &--one
     {
-        color: green;
+        @extend %btn-noHidden;
+        @extend %size;
+        color: green;  
     }
     &--two
     {
+        @extend %btn-noHidden;
+        @extend %size;
         color: red;
     }
     &--three
     {
-        color: blue;
+        @extend %btn-noHidden;
+        @extend %size;
+        color: blue;  
     }
     
 }
 
 .tdhidden
 {
-    
     border: 1px solid $grey-light; 
     @extend %entity;
-    
 }
 
 .tdhidden:hover
@@ -89,8 +104,7 @@ img
     .tdhidden
     {
         display: none;
-        background-color: #737373;
-        
+        background-color: $grey-dark;   
     }
     .td , .td--one, .td--two, .td--three
     {
